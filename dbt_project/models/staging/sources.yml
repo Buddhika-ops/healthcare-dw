@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+- name: raw
+  database: healthcare_dw
+  schema: public
+  tables:
+  - name: raw_patients
+  - name: raw_encounters
+  - name: raw_providers
+  - name: raw_organizations
+  - name: raw_payers
+  - name: raw_observations
+  - name: raw_claims
+
