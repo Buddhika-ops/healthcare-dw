@@ -1,6 +1,6 @@
 SELECT
     "Id" as patient_id,
-    cast("BIRTHDATE" as date)as birth_day,
+    cast("BIRTHDATE" as date)as birth_date,
     cast("DEATHDATE" as date)as death_date,
     "GENDER" as gender,
     "RACE" as race,

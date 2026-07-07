@@ -1,6 +1,6 @@
 SELECT
-    "Id" as organizations_id,
-    "NAME" as organizations_name,
+    "Id" as organization_id,
+    "NAME" as organization_name,
     "CITY" as city,
     "STATE" as state,
     cast("REVENUE" as numeric) as revenue,

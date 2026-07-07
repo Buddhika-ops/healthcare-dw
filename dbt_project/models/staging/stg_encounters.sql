@@ -1,7 +1,7 @@
 SELECT
     "Id" as encounter_id,
     "PATIENT" as patient_id,
-    "ORGANIZATION" as organizations_id,
+    "ORGANIZATION" as organization_id,
     "PROVIDER" as provider_id,
     "PAYER" as payer_id,
     cast("START" as timestamp) as start,

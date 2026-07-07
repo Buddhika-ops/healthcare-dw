@@ -1,0 +1,240 @@
+[0m17:42:16.177591 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109797b60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ae9ac10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ae9ae90>]}
+
+
+============================== 17:42:16.181496 | 79ea0ec9-6993-4caf-89d8-67892a29f5d7 ==============================
+[0m17:42:16.181496 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m17:42:16.181872 [debug] [MainThread]: running dbt with arguments {'log_path': 'logs', 'partial_parse': 'True', 'profiles_dir': '/Users/buddhika/.dbt', 'no_print': 'None', 'log_format': 'default', 'use_experimental_parser': 'False', 'introspect': 'True', 'use_colors': 'True', 'invocation_command': 'dbt init dbt_project', 'log_cache_events': 'False', 'maximum_seed_size_mib': '1', 'static_parser': 'True', 'debug': 'False', 'empty': 'None', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'quiet': 'False'}
+[0m17:42:16.192190 [info ] [MainThread]: A project called dbt_project already exists here.
+[0m17:42:16.194079 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.08489146, "process_in_blocks": "0", "process_kernel_time": 0.166363, "process_mem_max_rss": "150372352", "process_out_blocks": "0", "process_user_time": 1.297689}
+[0m17:42:16.194353 [debug] [MainThread]: Command `dbt init` succeeded at 17:42:16.194303 after 0.09 seconds
+[0m17:42:16.194528 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ace2060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10af1ca70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10aecbdf0>]}
+[0m17:42:16.194703 [debug] [MainThread]: Flushing usage events
+[0m17:42:17.812645 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:42:51.944568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b82fb60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cf3ac10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cf3ae90>]}
+
+
+============================== 17:42:51.947791 | dd9947dd-3757-4a20-9006-e6367385ac47 ==============================
+[0m17:42:51.947791 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m17:42:51.948137 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'debug': 'False', 'partial_parse': 'True', 'indirect_selection': 'eager', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt init dbt_project', 'profiles_dir': '/Users/buddhika/.dbt', 'log_path': 'logs', 'log_format': 'default', 'printer_width': '80', 'version_check': 'True', 'maximum_seed_size_mib': '1', 'fail_fast': 'False', 'warn_error': 'None', 'target_path': 'None', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'use_colors': 'True'}
+[0m17:42:51.957633 [debug] [MainThread]: Starter project path: /Users/buddhika/python/healthcare-dw/.venv/lib/python3.14/site-packages/dbt/include/starter_project
+[0m17:42:51.962273 [info ] [MainThread]: Setting up your profile.
+[0m17:44:34.366990 [info ] [MainThread]: Profile dbt_project written to /Users/buddhika/.dbt/profiles.yml using target's profile_template.yml and your supplied values.
+[0m17:44:34.370688 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m17:44:34.372288 [info ] [MainThread]: dbt version: 1.12.0-b3
+[0m17:44:34.372787 [info ] [MainThread]: python version: 3.14.3
+[0m17:44:34.372987 [info ] [MainThread]: python path: /Users/buddhika/python/healthcare-dw/.venv/bin/python3.14
+[0m17:44:34.373207 [info ] [MainThread]: os info: macOS-26.5.2-arm64-arm-64bit-Mach-O
+[0m17:44:34.396463 [info ] [MainThread]: Using profiles dir at /Users/buddhika/.dbt
+[0m17:44:34.396771 [info ] [MainThread]: Using profiles.yml file at /Users/buddhika/.dbt/profiles.yml
+[0m17:44:34.396958 [info ] [MainThread]: Using dbt_project.yml file at /Users/buddhika/python/healthcare-dw/dbt_project/dbt_project.yml
+[0m17:44:34.397747 [info ] [MainThread]: adapter type: postgres
+[0m17:44:34.398026 [info ] [MainThread]: adapter version: 1.10.2
+[0m17:44:34.461379 [info ] [MainThread]: Configuration:
+[0m17:44:34.461673 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:44:34.461839 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:44:34.462001 [info ] [MainThread]: Required dependencies:
+[0m17:44:34.462221 [debug] [MainThread]: Executing "git --help"
+[0m17:44:34.472034 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:44:34.472657 [debug] [MainThread]: STDERR: "b''"
+[0m17:44:34.472853 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:44:34.473023 [info ] [MainThread]: Connection:
+[0m17:44:34.473186 [info ] [MainThread]:   host: localhost
+[0m17:44:34.473318 [info ] [MainThread]:   port: 5432
+[0m17:44:34.473442 [info ] [MainThread]:   user: dwuser
+[0m17:44:34.473564 [info ] [MainThread]:   database: healthcare-dw
+[0m17:44:34.473683 [info ] [MainThread]:   schema: public
+[0m17:44:34.473833 [info ] [MainThread]:   connect_timeout: 10
+[0m17:44:34.473983 [info ] [MainThread]:   role: None
+[0m17:44:34.474104 [info ] [MainThread]:   search_path: None
+[0m17:44:34.474223 [info ] [MainThread]:   keepalives_idle: 0
+[0m17:44:34.474340 [info ] [MainThread]:   sslmode: None
+[0m17:44:34.474456 [info ] [MainThread]:   sslcert: None
+[0m17:44:34.474570 [info ] [MainThread]:   sslkey: None
+[0m17:44:34.474687 [info ] [MainThread]:   sslrootcert: None
+[0m17:44:34.474803 [info ] [MainThread]:   application_name: dbt
+[0m17:44:34.474919 [info ] [MainThread]:   retries: 1
+[0m17:44:34.475286 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m17:44:34.530888 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m17:44:34.561382 [debug] [MainThread]: Using postgres connection "debug"
+[0m17:44:34.561570 [debug] [MainThread]: On debug: select 1 as id
+[0m17:44:34.561708 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:44:34.605903 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "healthcare-dw" does not exist
+
+[0m17:44:34.614877 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m17:44:34.615043 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m17:44:34.615288 [debug] [MainThread]: On debug: No close available on handle
+[0m17:44:34.615483 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m17:44:34.615656 [info ] [MainThread]: [31m1 check failed:[0m
+[0m17:44:34.615800 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "healthcare-dw" does not exist
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m17:44:34.616040 [info ] [MainThread]: Your new dbt project "dbt_project" was created!
+Initialized new project in /Users/buddhika/python/healthcare-dw/dbt_project/dbt_project
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:44:34.616199 [info ] [MainThread]: [31mYour profile may need adjustments. You can find the logs of `dbt debug` above[0m
+[0m17:44:34.618809 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 102.73698, "process_in_blocks": "0", "process_kernel_time": 0.232307, "process_mem_max_rss": "166789120", "process_out_blocks": "0", "process_user_time": 1.449816}
+[0m17:44:34.619064 [debug] [MainThread]: Command `dbt init` succeeded at 17:44:34.619010 after 102.74 seconds
+[0m17:44:34.619233 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:44:34.619401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cd7e060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d807ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d7edf20>]}
+[0m17:44:34.619605 [debug] [MainThread]: Flushing usage events
+[0m17:44:36.268067 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:46:26.636348 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c3bbb60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dac6c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dac6e90>]}
+
+
+============================== 17:46:26.639541 | fb6f63ff-9012-4f90-b24d-d812d7d35098 ==============================
+[0m17:46:26.639541 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m17:46:26.639865 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'log_path': 'logs', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'target_path': 'None', 'profiles_dir': '/Users/buddhika/.dbt', 'maximum_seed_size_mib': '1', 'cache_selected_only': 'False', 'static_parser': 'True', 'write_json': 'True', 'introspect': 'True', 'no_print': 'None', 'printer_width': '80', 'partial_parse': 'True', 'invocation_command': 'dbt debug', 'quiet': 'False', 'empty': 'None', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'log_format': 'default', 'debug': 'False', 'indirect_selection': 'eager', 'warn_error': 'None'}
+[0m17:46:26.650673 [info ] [MainThread]: dbt version: 1.12.0-b3
+[0m17:46:26.650900 [info ] [MainThread]: python version: 3.14.3
+[0m17:46:26.651046 [info ] [MainThread]: python path: /Users/buddhika/python/healthcare-dw/.venv/bin/python3.14
+[0m17:46:26.651180 [info ] [MainThread]: os info: macOS-26.5.2-arm64-arm-64bit-Mach-O
+[0m17:46:26.695088 [info ] [MainThread]: Using profiles dir at /Users/buddhika/.dbt
+[0m17:46:26.695337 [info ] [MainThread]: Using profiles.yml file at /Users/buddhika/.dbt/profiles.yml
+[0m17:46:26.695484 [info ] [MainThread]: Using dbt_project.yml file at /Users/buddhika/python/healthcare-dw/dbt_project.yml
+[0m17:46:26.695666 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m17:46:26.697748 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.13222712, "process_in_blocks": "0", "process_kernel_time": 0.166545, "process_mem_max_rss": "154320896", "process_out_blocks": "0", "process_user_time": 1.321089}
+[0m17:46:26.698030 [debug] [MainThread]: Command `dbt debug` failed at 17:46:26.697977 after 0.13 seconds
+[0m17:46:26.698204 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10db93230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e2e1130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dc62360>]}
+[0m17:46:26.698386 [debug] [MainThread]: Flushing usage events
+[0m17:46:28.518880 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:48:11.207559 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d03b60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b412c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b412e90>]}
+
+
+============================== 17:48:11.210663 | 12e5c1e5-792a-4db5-9cf1-2ad371cd1275 ==============================
+[0m17:48:11.210663 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m17:48:11.211005 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'version_check': 'True', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt init dbt_project', 'target_path': 'None', 'use_colors': 'True', 'partial_parse': 'True', 'empty': 'None', 'indirect_selection': 'eager', 'printer_width': '80', 'debug': 'False', 'write_json': 'True', 'profiles_dir': '/Users/buddhika/.dbt', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'no_print': 'None', 'fail_fast': 'False', 'introspect': 'True', 'log_path': 'logs', 'quiet': 'False', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'static_parser': 'True'}
+[0m17:48:11.221805 [debug] [MainThread]: Starter project path: /Users/buddhika/python/healthcare-dw/.venv/lib/python3.14/site-packages/dbt/include/starter_project
+[0m17:48:11.225579 [info ] [MainThread]: Setting up your profile.
+[0m17:49:47.443943 [info ] [MainThread]: Profile dbt_project written to /Users/buddhika/.dbt/profiles.yml using target's profile_template.yml and your supplied values.
+[0m17:49:47.447368 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m17:49:47.447984 [info ] [MainThread]: dbt version: 1.12.0-b3
+[0m17:49:47.448231 [info ] [MainThread]: python version: 3.14.3
+[0m17:49:47.448604 [info ] [MainThread]: python path: /Users/buddhika/python/healthcare-dw/.venv/bin/python3.14
+[0m17:49:47.448922 [info ] [MainThread]: os info: macOS-26.5.2-arm64-arm-64bit-Mach-O
+[0m17:49:47.471627 [info ] [MainThread]: Using profiles dir at /Users/buddhika/.dbt
+[0m17:49:47.471923 [info ] [MainThread]: Using profiles.yml file at /Users/buddhika/.dbt/profiles.yml
+[0m17:49:47.472116 [info ] [MainThread]: Using dbt_project.yml file at /Users/buddhika/python/healthcare-dw/dbt_project/dbt_project.yml
+[0m17:49:47.472890 [info ] [MainThread]: adapter type: postgres
+[0m17:49:47.473152 [info ] [MainThread]: adapter version: 1.10.2
+[0m17:49:47.534088 [info ] [MainThread]: Configuration:
+[0m17:49:47.534360 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:49:47.534515 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:49:47.534662 [info ] [MainThread]: Required dependencies:
+[0m17:49:47.534899 [debug] [MainThread]: Executing "git --help"
+[0m17:49:47.544202 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:49:47.544687 [debug] [MainThread]: STDERR: "b''"
+[0m17:49:47.544851 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:49:47.545047 [info ] [MainThread]: Connection:
+[0m17:49:47.545212 [info ] [MainThread]:   host: localhost
+[0m17:49:47.545350 [info ] [MainThread]:   port: 5432
+[0m17:49:47.545482 [info ] [MainThread]:   user: dwuser
+[0m17:49:47.545616 [info ] [MainThread]:   database: healthcare_dw
+[0m17:49:47.545744 [info ] [MainThread]:   schema: public
+[0m17:49:47.545872 [info ] [MainThread]:   connect_timeout: 10
+[0m17:49:47.546001 [info ] [MainThread]:   role: None
+[0m17:49:47.546137 [info ] [MainThread]:   search_path: None
+[0m17:49:47.546283 [info ] [MainThread]:   keepalives_idle: 0
+[0m17:49:47.546414 [info ] [MainThread]:   sslmode: None
+[0m17:49:47.546542 [info ] [MainThread]:   sslcert: None
+[0m17:49:47.546671 [info ] [MainThread]:   sslkey: None
+[0m17:49:47.546794 [info ] [MainThread]:   sslrootcert: None
+[0m17:49:47.546929 [info ] [MainThread]:   application_name: dbt
+[0m17:49:47.547054 [info ] [MainThread]:   retries: 1
+[0m17:49:47.547399 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m17:49:47.600742 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m17:49:47.627731 [debug] [MainThread]: Using postgres connection "debug"
+[0m17:49:47.627935 [debug] [MainThread]: On debug: select 1 as id
+[0m17:49:47.628080 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:49:47.673769 [debug] [MainThread]: SQL status: SELECT 1 in 0.046 seconds
+[0m17:49:47.674344 [debug] [MainThread]: On debug: Close
+[0m17:49:47.674540 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m17:49:47.674717 [info ] [MainThread]: [32mAll checks passed![0m
+[0m17:49:47.674930 [info ] [MainThread]: Your new dbt project "dbt_project" was created!
+Initialized new project in /Users/buddhika/python/healthcare-dw/dbt_project/dbt_project
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:49:47.677608 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 96.53239, "process_in_blocks": "0", "process_kernel_time": 0.231251, "process_mem_max_rss": "162201600", "process_out_blocks": "0", "process_user_time": 1.447335}
+[0m17:49:47.677869 [debug] [MainThread]: Command `dbt init` succeeded at 17:49:47.677819 after 96.53 seconds
+[0m17:49:47.678036 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:49:47.678208 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b252060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bcdbad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bcc1f20>]}
+[0m17:49:47.678420 [debug] [MainThread]: Flushing usage events
+[0m17:49:49.519796 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:50:45.667243 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dc87b60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f38ec10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f38ee90>]}
+
+
+============================== 17:50:45.670463 | 8bd48cf1-bc56-4ddc-b391-7889ab0cc38e ==============================
+[0m17:50:45.670463 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m17:50:45.670796 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'profiles_dir': '/Users/buddhika/.dbt', 'introspect': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'quiet': 'False', 'target_path': 'None', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'no_print': 'None', 'use_colors': 'True', 'log_format': 'default', 'empty': 'None', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'use_experimental_parser': 'False', 'log_cache_events': 'False'}
+[0m17:50:45.681608 [info ] [MainThread]: dbt version: 1.12.0-b3
+[0m17:50:45.681843 [info ] [MainThread]: python version: 3.14.3
+[0m17:50:45.681988 [info ] [MainThread]: python path: /Users/buddhika/python/healthcare-dw/.venv/bin/python3.14
+[0m17:50:45.682125 [info ] [MainThread]: os info: macOS-26.5.2-arm64-arm-64bit-Mach-O
+[0m17:50:45.725727 [info ] [MainThread]: Using profiles dir at /Users/buddhika/.dbt
+[0m17:50:45.725977 [info ] [MainThread]: Using profiles.yml file at /Users/buddhika/.dbt/profiles.yml
+[0m17:50:45.726124 [info ] [MainThread]: Using dbt_project.yml file at /Users/buddhika/python/healthcare-dw/dbt_project.yml
+[0m17:50:45.726304 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m17:50:45.728819 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.12677991, "process_in_blocks": "0", "process_kernel_time": 0.167485, "process_mem_max_rss": "154238976", "process_out_blocks": "0", "process_user_time": 1.313282}
+[0m17:50:45.729108 [debug] [MainThread]: Command `dbt debug` failed at 17:50:45.729053 after 0.13 seconds
+[0m17:50:45.729287 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f467230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fba9130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f52a360>]}
+[0m17:50:45.729475 [debug] [MainThread]: Flushing usage events
+[0m17:50:47.370032 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:05:47.055480 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c157b60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d8b2d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d8b3250>]}
+
+
+============================== 20:05:47.058679 | bd62258e-764b-4e2b-9e31-e56dbe9c9150 ==============================
+[0m20:05:47.058679 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m20:05:47.059010 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'no_print': 'None', 'log_path': 'logs', 'write_json': 'True', 'version_check': 'True', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/Users/buddhika/.dbt', 'partial_parse': 'True', 'use_colors': 'True', 'empty': 'False', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run --select dim_insurance_plan', 'debug': 'False', 'warn_error': 'None', 'target_path': 'None', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'maximum_seed_size_mib': '1', 'quiet': 'False'}
+[0m20:05:47.059349 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/buddhika/python/healthcare-dw/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m20:05:47.061630 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.07416317, "process_in_blocks": "0", "process_kernel_time": 0.160322, "process_mem_max_rss": "148701184", "process_out_blocks": "0", "process_user_time": 1.256831}
+[0m20:05:47.062073 [debug] [MainThread]: Command `dbt run` failed at 20:05:47.062023 after 0.07 seconds
+[0m20:05:47.062246 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d6a7bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d92c170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d9306b0>]}
+[0m20:05:47.062409 [debug] [MainThread]: Flushing usage events
+[0m20:05:48.591005 [debug] [MainThread]: An error was encountered while trying to flush usage events
