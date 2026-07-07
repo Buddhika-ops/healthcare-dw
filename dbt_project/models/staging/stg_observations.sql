@@ -8,4 +8,4 @@ SELECT
     "VALUE" as value,
     "UNITS" as units,
     "TYPE" as type
-FROM {{source("raw","raw_observations")}}
+FROM {{ source("raw","raw_observations") }}

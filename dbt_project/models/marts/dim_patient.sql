@@ -13,7 +13,7 @@ select
     healthcare_expenses,
     healthcare_coverage,
 
-    -- computed: age as of today (or age at death, if deceased)
+    
     date_part(
         'year',
         age(coalesce(death_date, current_date), birth_date)

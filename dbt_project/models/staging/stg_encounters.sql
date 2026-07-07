@@ -14,4 +14,4 @@ SELECT
     "DESCRIPTION" as description,
     "REASONCODE" as reason_code,
     "REASONDESCRIPTION" as reason_description
-FROM{{ source("raw","raw_encounters") }}
+FROM {{ source("raw", "raw_encounters") }}

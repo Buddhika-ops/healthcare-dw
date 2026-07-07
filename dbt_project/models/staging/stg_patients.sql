@@ -13,4 +13,4 @@ SELECT
     cast("HEALTHCARE_COVERAGE" as numeric) as healthcare_coverage,
     cast("HEALTHCARE_EXPENSES" as numeric) as healthcare_expenses
 
-FROM {{source("raw","raw_patients")}}
+FROM {{ source("raw","raw_patients") }}

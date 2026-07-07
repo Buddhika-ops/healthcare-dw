@@ -9,4 +9,4 @@ SELECT
     "ENCOUNTERS" as encounter,
     "SPECIALITY" as speciality,
     "PROCEDURES" as procedures
-FROM {{source("raw","raw_providers")}}
+FROM {{ source("raw","raw_providers") }}

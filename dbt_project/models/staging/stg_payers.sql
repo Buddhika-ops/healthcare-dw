@@ -16,4 +16,4 @@ SELECT
     "UNIQUE_CUSTOMERS" as unique_customers,
     "QOLS_AVG" as qols_avg,
     "MEMBER_MONTHS" as member_months
-FROM {{source("raw","raw_payers")}}
+FROM {{ source("raw","raw_payers") }}
