@@ -21,7 +21,7 @@ final as (
 
         case
             when e.stop is null then null
-            else (cast(e.stop as date) - cast(e.start as date)) * 24
+            else round(extract(epoch from(e.stop - e.start))/ 3600,1)
         end as length_of_stay_hours
 
         from encounter as e
