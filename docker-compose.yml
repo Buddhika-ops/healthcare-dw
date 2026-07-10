@@ -1,15 +1,20 @@
-services:
-  postgres:
-    image: postgres:16
-    container_name: healthcare-oltp
-    environment:
-      POSTGRES_USER: dwuser
-      POSTGRES_PASSWORD: devpass
-      POSTGRES_DB: healthcare
-    ports:
-      - "5432:5432"
-    volumes:
-      - pgdata:/var/lib/postgresql/data
+# services:
+#   postgres:
+#     image: postgres:16
+#     container_name: healthcare-oltp
+#     environment:
+#       POSTGRES_USER: dwuser
+#       POSTGRES_PASSWORD: devpass
+#       POSTGRES_DB: healthcare
+#     ports:
+#       - "5432:5432"
+#     volumes:
+#       - pgdata:/var/lib/postgresql/data
+#     healthcheck:
+#       test: ["CMD-SHELL", "the command to run"]
+#       interval: 10s
+#       retries: 5
+#       start_period: 5s
 
-volumes:
-  pgdata:
+# volumes:
+#   pgdata:

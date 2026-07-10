@@ -1,0 +1,65 @@
+[2026-07-10T10:21:42.751+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-10T10:21:42.760+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: healthcare_pipeline.dbt_run manual__2026-07-10T10:21:08.769596+00:00 [queued]>
+[2026-07-10T10:21:42.764+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: healthcare_pipeline.dbt_run manual__2026-07-10T10:21:08.769596+00:00 [queued]>
+[2026-07-10T10:21:42.764+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-07-10T10:21:42.768+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): dbt_run> on 2026-07-10 10:21:08.769596+00:00
+[2026-07-10T10:21:42.770+0000] {standard_task_runner.py:72} INFO - Started process 568 to run task
+[2026-07-10T10:21:42.772+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'healthcare_pipeline', 'dbt_run', 'manual__2026-07-10T10:21:08.769596+00:00', '--job-id', '189', '--raw', '--subdir', 'DAGS_FOLDER/healthcare_pipeline.py', '--cfg-path', '/tmp/tmp85_7r4br']
+[2026-07-10T10:21:42.773+0000] {standard_task_runner.py:105} INFO - Job 189: Subtask dbt_run
+[2026-07-10T10:21:42.796+0000] {task_command.py:467} INFO - Running <TaskInstance: healthcare_pipeline.dbt_run manual__2026-07-10T10:21:08.769596+00:00 [running]> on host 94b22ff46e29
+[2026-07-10T10:21:42.830+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='healthcare_pipeline' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2026-07-10T10:21:08.769596+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-10T10:21:08.769596+00:00'
+[2026-07-10T10:21:42.830+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-07-10T10:21:42.837+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2026-07-10T10:21:42.837+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dbt_project && dbt run']
+[2026-07-10T10:21:42.841+0000] {subprocess.py:99} INFO - Output:
+[2026-07-10T10:21:43.959+0000] {subprocess.py:106} INFO - [0m10:21:43  Running with dbt=1.12.0-rc1
+[2026-07-10T10:21:44.083+0000] {subprocess.py:106} INFO - [0m10:21:44  Registered adapter: postgres=1.10.2
+[2026-07-10T10:21:44.187+0000] {subprocess.py:106} INFO - [0m10:21:44  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2026-07-10T10:21:44.187+0000] {subprocess.py:106} INFO - There are 1 unused configuration paths:
+[2026-07-10T10:21:44.187+0000] {subprocess.py:106} INFO - - models.dbt_project.example
+[2026-07-10T10:21:44.266+0000] {subprocess.py:106} INFO - [0m10:21:44  Found 15 models, 7 sources, 475 macros
+[2026-07-10T10:21:44.267+0000] {subprocess.py:106} INFO - [0m10:21:44
+[2026-07-10T10:21:44.268+0000] {subprocess.py:106} INFO - [0m10:21:44  Concurrency: 4 threads (target='dev')
+[2026-07-10T10:21:44.268+0000] {subprocess.py:106} INFO - [0m10:21:44
+[2026-07-10T10:21:44.354+0000] {subprocess.py:106} INFO - [0m10:21:44  1 of 15 START sql view model public.dim_date ................................... [RUN]
+[2026-07-10T10:21:44.355+0000] {subprocess.py:106} INFO - [0m10:21:44  2 of 15 START sql view model public.stg_claims ................................. [RUN]
+[2026-07-10T10:21:44.355+0000] {subprocess.py:106} INFO - [0m10:21:44  3 of 15 START sql view model public.stg_encounters ............................. [RUN]
+[2026-07-10T10:21:44.356+0000] {subprocess.py:106} INFO - [0m10:21:44  4 of 15 START sql view model public.stg_observations ........................... [RUN]
+[2026-07-10T10:21:44.450+0000] {subprocess.py:106} INFO - [0m10:21:44  3 of 15 OK created sql view model public.stg_encounters ........................ [[32mCREATE VIEW[0m in 0.09s]
+[2026-07-10T10:21:44.454+0000] {subprocess.py:106} INFO - [0m10:21:44  4 of 15 OK created sql view model public.stg_observations ...................... [[32mCREATE VIEW[0m in 0.10s]
+[2026-07-10T10:21:44.455+0000] {subprocess.py:106} INFO - [0m10:21:44  1 of 15 OK created sql view model public.dim_date .............................. [[32mCREATE VIEW[0m in 0.10s]
+[2026-07-10T10:21:44.455+0000] {subprocess.py:106} INFO - [0m10:21:44  5 of 15 START sql view model public.stg_organizations .......................... [RUN]
+[2026-07-10T10:21:44.455+0000] {subprocess.py:106} INFO - [0m10:21:44  2 of 15 OK created sql view model public.stg_claims ............................ [[32mCREATE VIEW[0m in 0.10s]
+[2026-07-10T10:21:44.458+0000] {subprocess.py:106} INFO - [0m10:21:44  6 of 15 START sql view model public.stg_patients ............................... [RUN]
+[2026-07-10T10:21:44.458+0000] {subprocess.py:106} INFO - [0m10:21:44  7 of 15 START sql view model public.stg_payers ................................. [RUN]
+[2026-07-10T10:21:44.460+0000] {subprocess.py:106} INFO - [0m10:21:44  8 of 15 START sql view model public.stg_providers .............................. [RUN]
+[2026-07-10T10:21:44.513+0000] {subprocess.py:106} INFO - [0m10:21:44  5 of 15 OK created sql view model public.stg_organizations ..................... [[32mCREATE VIEW[0m in 0.06s]
+[2026-07-10T10:21:44.517+0000] {subprocess.py:106} INFO - [0m10:21:44  9 of 15 START sql view model public.fact_encounter ............................. [RUN]
+[2026-07-10T10:21:44.517+0000] {subprocess.py:106} INFO - [0m10:21:44  6 of 15 OK created sql view model public.stg_patients .......................... [[32mCREATE VIEW[0m in 0.06s]
+[2026-07-10T10:21:44.518+0000] {subprocess.py:106} INFO - [0m10:21:44  8 of 15 OK created sql view model public.stg_providers ......................... [[32mCREATE VIEW[0m in 0.06s]
+[2026-07-10T10:21:44.519+0000] {subprocess.py:106} INFO - [0m10:21:44  7 of 15 OK created sql view model public.stg_payers ............................ [[32mCREATE VIEW[0m in 0.06s]
+[2026-07-10T10:21:44.522+0000] {subprocess.py:106} INFO - [0m10:21:44  10 of 15 START sql view model public.fact_lab_result ........................... [RUN]
+[2026-07-10T10:21:44.523+0000] {subprocess.py:106} INFO - [0m10:21:44  11 of 15 START sql view model public.fact_claim_line ........................... [RUN]
+[2026-07-10T10:21:44.523+0000] {subprocess.py:106} INFO - [0m10:21:44  12 of 15 START sql view model public.dim_facility .............................. [RUN]
+[2026-07-10T10:21:44.568+0000] {subprocess.py:106} INFO - [0m10:21:44  9 of 15 OK created sql view model public.fact_encounter ........................ [[32mCREATE VIEW[0m in 0.05s]
+[2026-07-10T10:21:44.569+0000] {subprocess.py:106} INFO - [0m10:21:44  10 of 15 OK created sql view model public.fact_lab_result ...................... [[32mCREATE VIEW[0m in 0.05s]
+[2026-07-10T10:21:44.571+0000] {subprocess.py:106} INFO - [0m10:21:44  13 of 15 START sql view model public.dim_patient ............................... [RUN]
+[2026-07-10T10:21:44.572+0000] {subprocess.py:106} INFO - [0m10:21:44  11 of 15 OK created sql view model public.fact_claim_line ...................... [[32mCREATE VIEW[0m in 0.05s]
+[2026-07-10T10:21:44.573+0000] {subprocess.py:106} INFO - [0m10:21:44  12 of 15 OK created sql view model public.dim_facility ......................... [[32mCREATE VIEW[0m in 0.05s]
+[2026-07-10T10:21:44.573+0000] {subprocess.py:106} INFO - [0m10:21:44  14 of 15 START sql view model public.dim_provider .............................. [RUN]
+[2026-07-10T10:21:44.576+0000] {subprocess.py:106} INFO - [0m10:21:44  15 of 15 START sql view model public.dim_insurance_plan ........................ [RUN]
+[2026-07-10T10:21:44.611+0000] {subprocess.py:106} INFO - [0m10:21:44  13 of 15 OK created sql view model public.dim_patient .......................... [[32mCREATE VIEW[0m in 0.04s]
+[2026-07-10T10:21:44.613+0000] {subprocess.py:106} INFO - [0m10:21:44  14 of 15 OK created sql view model public.dim_provider ......................... [[32mCREATE VIEW[0m in 0.04s]
+[2026-07-10T10:21:44.613+0000] {subprocess.py:106} INFO - [0m10:21:44  15 of 15 OK created sql view model public.dim_insurance_plan ................... [[32mCREATE VIEW[0m in 0.04s]
+[2026-07-10T10:21:44.620+0000] {subprocess.py:106} INFO - [0m10:21:44
+[2026-07-10T10:21:44.620+0000] {subprocess.py:106} INFO - [0m10:21:44  Finished running 15 view models in 0 hours 0 minutes and 0.35 seconds (0.35s).
+[2026-07-10T10:21:44.649+0000] {subprocess.py:106} INFO - [0m10:21:44
+[2026-07-10T10:21:44.649+0000] {subprocess.py:106} INFO - [0m10:21:44  [32mCompleted successfully[0m
+[2026-07-10T10:21:44.650+0000] {subprocess.py:106} INFO - [0m10:21:44
+[2026-07-10T10:21:44.650+0000] {subprocess.py:106} INFO - [0m10:21:44  Done. PASS=15 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=15
+[2026-07-10T10:21:47.125+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-07-10T10:21:47.141+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-07-10T10:21:47.141+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=healthcare_pipeline, task_id=dbt_run, run_id=manual__2026-07-10T10:21:08.769596+00:00, execution_date=20260710T102108, start_date=20260710T102142, end_date=20260710T102147
+[2026-07-10T10:21:47.196+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-10T10:21:47.205+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-10T10:21:47.206+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

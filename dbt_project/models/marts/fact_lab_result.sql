@@ -13,8 +13,8 @@ final as (
         description,
         value,
         units,
-        type as value_type
-        
+        type as value_types
+
     from observations
     where category = 'laboratory'
 )

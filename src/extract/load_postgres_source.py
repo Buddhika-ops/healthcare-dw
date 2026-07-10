@@ -7,14 +7,14 @@ hospital live oparational database.
 """
 import pandas as pd
 from pathlib import Path
-from .db import get_engine
+from sqlalchemy import create_engine
 
-
+DB_URL = "postgresql+psycopg2://healthcare:healthcare@localhost:5433/healthcare"
 DATA_DIR = Path(__file__).resolve().parents[2] / "data" / "postgres_source"
 
-DB_URL = "postgresql+psycopg2://dwuser:devpass@localhost:5432/healthcare"
 
-engine = get_engine()
+
+engine = create_engine(DB_URL)
 
 file_to_tables = {
     "encounters.csv":"encounters",
