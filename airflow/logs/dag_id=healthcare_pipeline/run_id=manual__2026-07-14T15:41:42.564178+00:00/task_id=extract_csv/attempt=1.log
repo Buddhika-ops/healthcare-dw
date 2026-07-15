@@ -1,0 +1,25 @@
+[2026-07-14T15:41:46.815+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-14T15:41:46.822+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: healthcare_pipeline.extract_csv manual__2026-07-14T15:41:42.564178+00:00 [queued]>
+[2026-07-14T15:41:46.825+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: healthcare_pipeline.extract_csv manual__2026-07-14T15:41:42.564178+00:00 [queued]>
+[2026-07-14T15:41:46.825+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-07-14T15:41:46.830+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): extract_csv> on 2026-07-14 15:41:42.564178+00:00
+[2026-07-14T15:41:46.832+0000] {standard_task_runner.py:72} INFO - Started process 1924 to run task
+[2026-07-14T15:41:46.833+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'healthcare_pipeline', 'extract_csv', 'manual__2026-07-14T15:41:42.564178+00:00', '--job-id', '258', '--raw', '--subdir', 'DAGS_FOLDER/healthcare_pipeline.py', '--cfg-path', '/tmp/tmpydw4l78h']
+[2026-07-14T15:41:46.834+0000] {standard_task_runner.py:105} INFO - Job 258: Subtask extract_csv
+[2026-07-14T15:41:46.857+0000] {task_command.py:467} INFO - Running <TaskInstance: healthcare_pipeline.extract_csv manual__2026-07-14T15:41:42.564178+00:00 [running]> on host 94b22ff46e29
+[2026-07-14T15:41:46.890+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='healthcare_pipeline' AIRFLOW_CTX_TASK_ID='extract_csv' AIRFLOW_CTX_EXECUTION_DATE='2026-07-14T15:41:42.564178+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-14T15:41:42.564178+00:00'
+[2026-07-14T15:41:46.890+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-07-14T15:41:46.896+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2026-07-14T15:41:46.897+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '\n        python /opt/***/src/extract/extract_csv.py\n        ']
+[2026-07-14T15:41:46.900+0000] {subprocess.py:99} INFO - Output:
+[2026-07-14T15:41:47.303+0000] {subprocess.py:106} INFO - Loading patients.csv -> file '/opt/***/data/legacy_export/patients.csv' ...
+[2026-07-14T15:41:47.304+0000] {subprocess.py:106} INFO -   Loaded 1186 rows into 'raw_patients.csv'
+[2026-07-14T15:41:47.304+0000] {subprocess.py:106} INFO - Loading payers.csv -> file '/opt/***/data/legacy_export/payers.csv' ...
+[2026-07-14T15:41:47.304+0000] {subprocess.py:106} INFO -   Loaded 10 rows into 'raw_payers.csv'
+[2026-07-14T15:41:47.304+0000] {subprocess.py:106} INFO - Done. All two file loaded into data/raw.
+[2026-07-14T15:41:47.332+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-07-14T15:41:47.347+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-07-14T15:41:47.347+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=healthcare_pipeline, task_id=extract_csv, run_id=manual__2026-07-14T15:41:42.564178+00:00, execution_date=20260714T154142, start_date=20260714T154146, end_date=20260714T154147
+[2026-07-14T15:41:47.389+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-14T15:41:47.401+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-14T15:41:47.402+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

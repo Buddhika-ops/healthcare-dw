@@ -1,0 +1,13 @@
+dbt_project:
+  target: dev
+
+  outputs:
+    dev:
+      type: postgres
+      host: healthcare-dw
+      port: 5432
+      user: warehouse
+      password: warehouse
+      dbname: healthcare_dw
+      schema: public
+      threads: 4
