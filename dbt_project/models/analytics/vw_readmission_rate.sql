@@ -5,11 +5,11 @@ with encounter_orders as(
         encounter_date,
         facility_id,
         lag(encounter_date) over(
-            partition by patient_id
+            partition by patient_id,facility_id
             order by encounter_date
         ) as previous_encounter_date
     from {{ ref("fact_encounter") }}
-    where encounter_date >= '2010-01-01'
+    where encounter_date >= '2010-01-01' and encounter_class = 'inpatient'
 ),
 
 flaged as(
@@ -42,10 +42,11 @@ final as (
     left join {{ ref("dim_facility") }} as fac
     on f.facility_id = fac.facility_id
 
-    left join {{"dim_date"}} as d
+    left join {{ ref("dim_date") }} as d
     on f.encounter_date = d.date_day
 
     group by f.facility_id,d.year,fac.facility_name
+    having count(*) >= 5
     order by d.year,f.facility_id
 )
 
