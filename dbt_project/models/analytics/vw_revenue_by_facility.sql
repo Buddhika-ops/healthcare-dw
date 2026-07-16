@@ -14,7 +14,7 @@ left join {{ ref('dim_date') }} as d
 on f.encounter_date = d.date_day
 
 group by f.facility_id,fac.facility_name,d.year,d.month
-order by d.year, d.month,fac.facility_name
+order by d.year desc, d.month desc,fac.facility_name
 
 
 

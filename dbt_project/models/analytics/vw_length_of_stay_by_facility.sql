@@ -15,4 +15,4 @@ left join {{ ref('dim_date') }} as d
 where f.length_of_stay_hours is not null
 
 group by f.facility_id, fac.facility_name, d.year, d.month
-order by d.year, d.month, fac.facility_name
+order by d.year desc, d.month desc, fac.facility_name

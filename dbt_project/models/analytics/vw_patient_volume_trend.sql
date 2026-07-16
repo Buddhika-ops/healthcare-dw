@@ -10,5 +10,5 @@ on f.encounter_date = d.date_day
 where f.encounter_date >= '2010-01-01'
 
 group by d.year,d.month
-order by d.year, d.month
+order by d.year desc, d.month desc
 

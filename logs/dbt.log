@@ -254,3 +254,19 @@ Runtime Error
 [0m10:12:29.247268 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ced0c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a233010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a233c70>]}
 [0m10:12:29.247497 [debug] [MainThread]: Flushing usage events
 [0m10:12:32.973504 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:59:59.946003 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1084a91b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1099f3ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1099f2e00>]}
+
+
+============================== 14:59:59.949052 | b8dd229a-1759-451c-8cbf-2084fc3de848 ==============================
+[0m14:59:59.949052 [info ] [MainThread]: Running with dbt=1.12.0-rc1
+[0m14:59:59.949448 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'version_check': 'True', 'log_format': 'default', 'target_path': 'None', 'warn_error': 'None', 'quiet': 'False', 'printer_width': '80', 'log_cache_events': 'False', 'use_colors': 'True', 'empty': 'False', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run --select vw_revenue_by_facility', 'profiles_dir': '/Users/buddhika/.dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'partial_parse': 'True', 'log_path': 'logs', 'write_json': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'indirect_selection': 'eager'}
+[0m14:59:59.949869 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/buddhika/python/healthcare-dw/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m14:59:59.963365 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.09060988, "process_in_blocks": "0", "process_kernel_time": 0.150692, "process_mem_max_rss": "113213440", "process_out_blocks": "0", "process_user_time": 0.871071}
+[0m14:59:59.963767 [debug] [MainThread]: Command `dbt run` failed at 14:59:59.963699 after 0.09 seconds
+[0m14:59:59.964039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1084a91b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1099f3130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1099f3d90>]}
+[0m14:59:59.964281 [debug] [MainThread]: Flushing usage events
+[0m15:00:02.072121 [debug] [MainThread]: An error was encountered while trying to flush usage events

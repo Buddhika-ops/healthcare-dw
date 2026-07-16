@@ -47,7 +47,7 @@ final as (
 
     group by f.facility_id,d.year,fac.facility_name
     having count(*) >= 5
-    order by d.year,f.facility_id
+    order by d.year desc,f.facility_id
 )
 
 select * from final
