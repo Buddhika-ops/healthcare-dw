@@ -61,15 +61,23 @@ An end-to-end Healthcare Data Warehouse project that integrates data from multip
 - Patient Trend by Gender and Age
 - Claim Analytics
 
-## Airflow Orchestration
-The workflow is orchestrated using Apache Airflow.
-Main Tasks:
- - extract_api
- - extract_csv
- - extract_postgres
- - validate_data
- - load_raw_to_warehouse
- - dbt_run
+## Data Source 
+ - Synthea — synthetic patient data generator. No real patient data is used anywhere in this project.
+
+
+## Pipeline Orchestration
+```
+extract_csv         -|
+extract_postgres     | -> validate_data -> load_raw_to_warehouse -> dbt_run
+extract_api         _|
+
+```
+The three extractors run in parallel since they have no interdependency. Data quality
+validation runs once all three complete, gating the load step — a failure here should
+stop the pipeline before bad data ever reaches the warehouse.
+
+Runs inside Docker Compose with dedicated containers for the OLTP source, the data
+warehouse, the mock API, and Airflow's own services — all on a shared Docker network.
 
 ## What This Project Demonstrates
 - Ingesting from three genuinely different source types — flat files, a relational
@@ -88,25 +96,6 @@ with an honest writeup of when Spark actually pays off
 (Oracle Cloud, Railway) — capacity limits, memory constraints, SSH connectivity, and
 safe cleanup of a mis-provisioned paid resource
 
-## Data Model
-### Source 
- - Synthea — synthetic patient
-data generator. No real patient data is used anywhere in this project.
-
-
-## Pipeline Orchestration
-```
-extract_csv         -|
-extract_postgres     | -> validate_data -> load_raw_to_warehouse -> dbt_run
-extract_api         _|
-
-```
-The three extractors run in parallel since they have no interdependency. Data quality
-validation runs once all three complete, gating the load step — a failure here should
-stop the pipeline before bad data ever reaches the warehouse.
-
-Runs inside Docker Compose with dedicated containers for the OLTP source, the data
-warehouse, the mock API, and Airflow's own services — all on a shared Docker network.
 
 
 ## Cloud Deployment — What Actually Happened
