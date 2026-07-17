@@ -126,7 +126,7 @@ Expectations checks across all 7 raw sousource files:
 ## Running This Project
 
 ```bash
-    git clone https://github.com/<your-username>/healthcare-dw.git
+    git clone https://github.com/Buddhika-ops/healthcare-dw.git
     cd airflow
     docker compose up -d
 ```
