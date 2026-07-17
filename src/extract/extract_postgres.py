@@ -1,15 +1,19 @@
+import os
 import pandas as pd
 import psycopg2
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv(Path(__file__).resolve().parents[2] / ".env")
 
 OUTPUT_DIR = Path(__file__).resolve().parents[2] / "data" / "raw"
 
 DB_CONFIG = {
-    "host": "healthcare-oltp",
-    "port": 5432,
-    "dbname": "healthcare",
-    "user": "healthcare",
-    "password": "healthcare"
+    "host": os.getenv("OLTP_DB_HOST", "healthcare-oltp"),
+    "port": int(os.getenv("OLTP_DB_PORT", "5432")),
+    "dbname": os.getenv("OLTP_DB_NAME", "healthcare"),
+    "user": os.getenv("OLTP_DB_USER", "healthcare"),
+    "password": os.getenv("OLTP_DB_PASSWORD", "healthcare")
 }
 
 table_to_csv = {

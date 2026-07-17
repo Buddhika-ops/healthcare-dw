@@ -5,6 +5,8 @@ services:
       context: ..
       dockerfile: Dockerfile.api
     container_name: healthcare-api
+    env_file:
+      - ../.env
     ports:
        - "8000:8000"
 
@@ -12,10 +14,12 @@ services:
   postgres:
     image: postgres:16
     container_name: airflow-db
-    environment: 
-      POSTGRES_USER: airflow
-      POSTGRES_PASSWORD: airflow
-      
+    env_file:
+      - ../.env
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-airflow}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-airflow}
+      POSTGRES_DB: ${POSTGRES_DB:-airflow}
     volumes:
       - airflow_pgdata:/var/lib/postgresql/data
 
@@ -24,10 +28,12 @@ services:
   healthcare-oltp:
     image: postgres:16
     container_name: healthcare-oltp
+    env_file:
+      - ../.env
     environment:
-      POSTGRES_USER: healthcare
-      POSTGRES_PASSWORD: healthcare
-      POSTGRES_DB: healthcare
+      POSTGRES_USER: ${OLTP_DB_USER:-healthcare}
+      POSTGRES_PASSWORD: ${OLTP_DB_PASSWORD:-healthcare}
+      POSTGRES_DB: ${OLTP_DB_NAME:-healthcare}
     ports:
       - "5433:5432"
     volumes:
@@ -36,10 +42,12 @@ services:
   healthcare-dw:
     image: postgres:16
     container_name: healthcare-dw
+    env_file:
+      - ../.env
     environment:
-      POSTGRES_USER: warehouse
-      POSTGRES_PASSWORD: warehouse
-      POSTGRES_DB: healthcare_dw
+      POSTGRES_USER: ${DW_DB_USER:-warehouse}
+      POSTGRES_PASSWORD: ${DW_DB_PASSWORD:-warehouse}
+      POSTGRES_DB: ${DW_DB_NAME:-healthcare_dw}
     ports:
       - "5434:5432"
     volumes:
@@ -54,9 +62,11 @@ services:
     depends_on:
       - postgres
       - healthcare-oltp
+    env_file:
+      - ../.env
     environment:
       DBT_PROFILES_DIR: /opt/airflow/dbt_project
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER:-airflow}:${POSTGRES_PASSWORD:-airflow}@postgres:5432/${POSTGRES_DB:-airflow}
     command: >
       bash -c "
       airflow db migrate &&
@@ -78,9 +88,11 @@ services:
     depends_on:
       - postgres
       - healthcare-oltp
+    env_file:
+      - ../.env
     environment:
       DBT_PROFILES_DIR: /opt/airflow/dbt_project
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
     command: airflow webserver
     ports:
       - "8080:8080"
@@ -102,9 +114,11 @@ services:
     depends_on:
       - postgres
       - healthcare-oltp
+    env_file:
+      - ../.env
     environment:
       DBT_PROFILES_DIR: /opt/airflow/dbt_project
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
     command: airflow scheduler
     volumes:
       - ./dags:/opt/airflow/dags

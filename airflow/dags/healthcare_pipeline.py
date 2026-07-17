@@ -1,12 +1,17 @@
 from airflow import DAG
 from airflow.operators.bash import BashOperator
-from datetime import datetime
+from datetime import datetime, timedelta
 
+default_args = {
+    "retries": 2,
+    "retry_delay": timedelta(minutes=5),
+}
 with DAG(
     dag_id="healthcare_pipeline",
     start_date=datetime(2026, 7, 1),
     schedule="@daily",
     catchup=False,
+    default_args=default_args,
 ) as dag:
 
     extract_api = BashOperator(

@@ -1,8 +1,15 @@
+import os
 import pandas as pd
 from pathlib import Path
 from sqlalchemy import create_engine, text
+from dotenv import load_dotenv
 
-DB_URL = "postgresql+psycopg2://warehouse:warehouse@healthcare-dw:5432/healthcare_dw"
+load_dotenv(Path(__file__).resolve().parents[2] / ".env")
+
+DB_URL = (
+    f"postgresql+psycopg2://{os.getenv('DW_DB_USER', 'warehouse')}:{os.getenv('DW_DB_PASSWORD', 'warehouse')}"
+    f"@{os.getenv('DW_DB_HOST', 'healthcare-dw')}:{os.getenv('DW_DB_PORT', '5432')}/{os.getenv('DW_DB_NAME', 'healthcare_dw')}"
+)
 engine = create_engine(DB_URL)
 
 FILES_TO_TABLES = {

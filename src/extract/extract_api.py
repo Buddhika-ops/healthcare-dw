@@ -1,10 +1,14 @@
+import os
 import pandas as pd
 import requests
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv(Path(__file__).resolve().parents[2] / ".env")
 
 OUTPUT_DIR = Path(__file__).resolve().parents[2] /"data" / "raw"
 
-BASE_URL = "http://api:8000"
+BASE_URL = os.getenv("API_BASE_URL", "http://api:8000")
 endpoint_to_csv = {
     "observations": "raw_observations.csv",
     "claims": "raw_claims.csv",

@@ -5,11 +5,18 @@ into the healthcare-oltp Postgres container.
 hospital live oparational database.
 
 """
+import os
 import pandas as pd
 from pathlib import Path
 from sqlalchemy import create_engine
+from dotenv import load_dotenv
 
-DB_URL = "postgresql+psycopg2://healthcare:healthcare@localhost:5433/healthcare"
+load_dotenv(Path(__file__).resolve().parents[2] / ".env")
+
+DB_URL = (
+    f"postgresql+psycopg2://{os.getenv('OLTP_DB_USER', 'healthcare')}:{os.getenv('OLTP_DB_PASSWORD', 'healthcare')}"
+    f"@{os.getenv('OLTP_DB_HOST', 'localhost')}:{os.getenv('OLTP_DB_PORT', '5433')}/{os.getenv('OLTP_DB_NAME', 'healthcare')}"
+)
 DATA_DIR = Path(__file__).resolve().parents[2] / "data" / "postgres_source"
 
 
