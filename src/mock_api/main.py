@@ -2,7 +2,7 @@
 Mock REST API simulating a hospital lab/claims vendor feed.
 
 Serves observations.csv and claims.csv as paginated JSON, the way a real
-vendor API (e.g. a lab system or clearinghouse) would.
+vendor API  would.
 
 Run with:
     uvicorn src.mock_api.main:app --reload
