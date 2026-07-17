@@ -20,7 +20,8 @@ An end-to-end Healthcare Data Warehouse project that integrates data from multip
 
 
 ## Architecture
-<image>
+<img width="502" height="582" alt="architecture drawio" src="https://github.com/user-attachments/assets/70fabc54-e7b0-4577-be5a-6fc30fea39d5" />
+
 
 
 ## Technology Stack
@@ -90,7 +91,7 @@ safe cleanup of a mis-provisioned paid resource
 ## Data Model
 ### Source 
  - Synthea — synthetic patient
-data generator. No real patient data is used anywhere in this project
+data generator. No real patient data is used anywhere in this project.
 
 
 ## Pipeline Orchestration
@@ -128,7 +129,8 @@ connections
 - Metabase: was used instead — genuinely free, connects
 directly to Postgres, and fits the project's existing containerized architecture.
 
-<image>
+<img width="662" height="777" alt="image" src="https://github.com/user-attachments/assets/3e90c37a-c2ef-4dd2-85ff-9bf13891e050" />
+
 
 ## Data Quality
 A single, reusable, config-driven validator (not one script per file) runs Great
@@ -152,7 +154,8 @@ Expectations checks across all 7 raw sousource files:
 
 ## Project Structure
 
-<image>
+<img width="581" height="471" alt="project_structure drawio" src="https://github.com/user-attachments/assets/075f4cc0-fcce-46f5-8ade-85f0a63ed1b9" />
+
 
 ## Running This Project
 
